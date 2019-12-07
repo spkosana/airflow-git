@@ -15,7 +15,7 @@ jobs:
     - name: Get committer details
       run: |
         echo Actor: ${{ github.actor }}
-        echo Committed By: ${{ github.event.commits[0].name }}
+        echo Committed By: ${{ github.event.commits[0].author.name }}
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
