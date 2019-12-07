@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Get committer details
+      run: |
+        echo Actor: ${{ github.actor }}
+        echo Committed By: ${{ github.event.commits[0].name }}
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
